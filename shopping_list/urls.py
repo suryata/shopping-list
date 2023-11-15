@@ -21,4 +21,5 @@ from main.views import show_main, create_product, show_xml, show_json, show_xml_
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
+    path('auth/', include('authentication.urls')),
 ]
