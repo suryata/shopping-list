@@ -19,7 +19,7 @@ from django.urls import path, include
 from main.views import show_main, create_product, show_xml, show_json, show_xml_by_id, show_json_by_id 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('auth/', include('authentication.urls')),
+    path('admin/', admin.site.urls),
 ]
