@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import datetime
+import json
 from django.http import HttpResponseNotFound, HttpResponseRedirect, JsonResponse
 from main.forms import ProductForm
 from django.urls import reverse
@@ -133,7 +134,7 @@ def add_product_ajax(request):
 def create_product_flutter(request):
     if request.method == 'POST':
         
-        data = JsonResponse.loads(request.body)
+        data = json.loads(request.body)
 
         new_product = Product.objects.create(
             user = request.user,
