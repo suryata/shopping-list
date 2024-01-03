@@ -1,2 +1,2 @@
 # shopping-list
-testing the environment of nodejs
+testing the environment of nodejs framework
